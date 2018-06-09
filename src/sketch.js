@@ -6,9 +6,6 @@ var CELLWIDTH = 50;
 function setup() {
   createCanvas(GRIDHEIGHT, GRIDWIDTH);
   theGrid = new Grid(GRIDHEIGHT, GRIDWIDTH, CELLWIDTH);
-}
-
-function draw() {
   clear();
   theGrid.render();
 }
@@ -26,6 +23,9 @@ function keyPressed() {
 	if(keyCode === DOWN_ARROW) {
 		theGrid.moveDown();
   }
+
+  clear();
+  theGrid.render();
 }
 
 function Grid(gridWidth, gridHeight, cellWidth) {
